@@ -1,0 +1,12 @@
+node_modules
+
+.turbo
+.env
+
+package-lock.json
+yarn.lock
+
+apps/*/node_modules
+apps/*/build
+apps/*/.turbo
+apps/*/.env
