@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose'
 
-const itemSchema = Schema ({
+const ItemSchema = Schema ({
   text: {
     type: String,
     required: true
@@ -23,12 +23,12 @@ const itemSchema = Schema ({
   },
   expireAt: {
     type: Date,
-    default: () => new Date(Date.now() + 10*60*1000)
+    default: () => new Date(Date.now() + 600000)
   }
 }, {
   versionKey: false
 })
 
-itemSchema.index({ 'expireAt': 1 }, { expireAfterSeconds: 0 })
+ItemSchema.index({ 'expireAt': 1 }, { expireAfterSeconds: 0 })
 
-export default model ('Item', itemSchema, 'items')
+export default model ('Item', ItemSchema, 'Items')

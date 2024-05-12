@@ -8,7 +8,7 @@ const Footer = () => {
       <p>
         <span>&copy;</span>
         {` Copyright ${update} | Developed by `}
-        <a href='' target='_blank'>CodeCatCoffee</a>
+        <a href='http://codecatcoffee.com/' target='_blank'>CodeCatCoffee LLC</a>
       </p>
     </div>
   )

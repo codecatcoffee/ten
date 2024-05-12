@@ -14,6 +14,7 @@ const CreateItemPage = () => {
 
   const { appContext, setAppContext } = useAppContext()
   const { seedState } = appContext
+
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -47,6 +48,7 @@ const CreateItemPage = () => {
       setTimeout(() => setBorder(false), 300)
       setTimeout(() => setBorder(true), 200)
       setTimeout(() => setBorder(false), 100)
+
       return setBorder(true)
     }
 
@@ -67,6 +69,7 @@ const CreateItemPage = () => {
   const timeLeft = () => {
     const seconds = (Math.floor(time / 1000) % 60).toString().padStart(2, '0')
     const minutes = Math.floor(time / 1000 / 60).toString().padStart(2, '0')
+    
     return `${minutes}:${seconds}`
   }
 

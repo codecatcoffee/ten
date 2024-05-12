@@ -1,4 +1,4 @@
-<div align='center'>
+<!-- <div align='center'>
 
 <img src='./public/logo.png' height='90px' width='auto' />
 <h2><em>Minimalist</em> Résumé styled for WEB and PDF</h2>
@@ -151,3 +151,14 @@ If you would like to contribute to Easycopy, you are more than welcome! Feel fre
 
 This project is licensed under the MIT License. For more information, please see the [LICENSE](https://github.com/santraez/easycopy/blob/main/LICENSE) file.
 
+"keywords": [
+    "create-react-app",
+    "express",
+    "javascript",
+    "monorepo"
+    "node",
+    "react",
+    "spa",
+    "turbo",
+    "vercel"
+  ], -->

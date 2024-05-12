@@ -5,13 +5,16 @@ import styles from './SideButton.module.sass'
 const SideButton = () => {
   const { appContext, setAppContext } = useAppContext()
   const { nav } = appContext
+
   const [currentPath, setCurrentPath] = useState()
   const [selected, setSelected] = useState()
 
   useEffect(() => {
     const updateCurrentPath = () => setCurrentPath(window.location.pathname)
+
     updateCurrentPath()
     window.addEventListener('popstate', updateCurrentPath)
+    
     return () => {
       window.removeEventListener('popstate', updateCurrentPath)
     }

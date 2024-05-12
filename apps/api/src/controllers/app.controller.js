@@ -1,8 +1,6 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import ItemModel from '../models/Item.model'
 import randomSeed from '../helpers/randomSeed'
-
-dotenv.config()
 
 const { API_KEY } = process.env
 

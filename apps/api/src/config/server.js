@@ -1,19 +1,28 @@
-import express from 'express'
+import path from 'path'
+import express, { json, urlencoded } from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 import appRoute from '../routes/app.route'
-import path from 'path'
 
-const app = express()
+const createServer = () => {
+  const app = express()
+  const clientPath = path.join(__dirname, '../../../', 'client/build')
 
-app.use(cors())
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+  app
+    .disable('x-powered-by')
+    .use(morgan('dev'))
+    .use(urlencoded({ extended: true }))
+    .use(json())
+    .use(cors())
+    .use('/api', appRoute)
+  
+  app.use(express.static(clientPath))
 
-app.use(express.static(path.join(__dirname, '../../../', 'client/build')))
-app.get('/', (req, res) => {})
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientPath, 'index.html'))
+  })
 
-app.use('/api', appRoute)
+  return app
+}
 
-export default app
+export default createServer

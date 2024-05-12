@@ -1,10 +1,12 @@
-import dotenv from 'dotenv'
-import app from './config/server'
+import 'dotenv/config'
+import createServer from './config/server'
 import initDB from './config/database'
 
-dotenv.config()
 initDB()
 
+const server = createServer()
 const PORT = process.env.PORT || 3001
 
-app.listen(PORT, () => console.log('SERVER LISTENING ON PORT', PORT))
+server.listen(PORT, () => {
+  console.log('SERVER LISTENING ON PORT', PORT)
+})
