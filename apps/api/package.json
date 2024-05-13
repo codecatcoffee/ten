@@ -2,10 +2,11 @@
   "name": "api",
   "version": "1.2.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "build": "babel src/ --out-dir build/",
-    "dev": "nodemon src/app.js --exec babel-node",
-    "start": "node build/app.js"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "node build/index.js"
   },
   "dependencies": {
     "cors": "2.8.5",

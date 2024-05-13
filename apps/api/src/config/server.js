@@ -6,7 +6,7 @@ import appRoute from '../routes/app.route'
 
 const createServer = () => {
   const app = express()
-  const clientPath = path.join(__dirname, '../../', 'build/client/')
+  const clientPath = path.join(__dirname, '../../../', 'client/build/')
 
   app
     .disable('x-powered-by')
