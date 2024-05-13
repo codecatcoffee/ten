@@ -3,10 +3,10 @@
   "version": "1.2.0",
   "private": true,
   "scripts": {
-    "build": "CI=false react-scripts build",
+    "build": "CI=false react-scripts build && mv build/ ../api/build/client/",
     "dev": "react-scripts start",
-    "eject": "react-scripts eject",
     "start": "",
+    "eject": "react-scripts eject",
     "test": "react-scripts test"
   },
   "dependencies": {
