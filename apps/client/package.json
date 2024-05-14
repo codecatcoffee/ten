@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "scripts": {
-    "build": "CI=false react-scripts build",
+    "build": "react-scripts build",
     "dev": "react-scripts start",
     "start": "",
     "eject": "react-scripts eject",
